@@ -169,6 +169,10 @@ img.clickable:hover {
     box-shadow: 0 0 0 calc(var(--border) + 2px) var(--accent-color-hover);
 }
 
+img.zoomed {
+    cursor: zoom-in;
+}
+
 .table {
     overflow: hidden;
 }
