@@ -206,6 +206,7 @@ td {
 @media (max-width: 810px) {
     body {
         --margin: 8px;
+        --min-border-radius: 16px;
         display: block;
     }
 

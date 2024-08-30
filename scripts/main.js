@@ -44,6 +44,8 @@ $(document).ready(function() {
   $("*").removeClass("preload");
 });
 
+// Для подсветки таблицы
+
 $("tr").hover(function(){
   const $row = $(this);
   const rowIndex = $row.index();
