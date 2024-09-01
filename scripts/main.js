@@ -1,6 +1,29 @@
 // Добавили всем элементам класс "Прелоад", который в CSS для них выключает всякие transition (анимации), чтобы сайт спокойно мог загрузиться и не флексить.
 $('*').addClass("preload")
 
+// Функция для перемещения переключателя темы
+function moveThemeSwitch() {
+    const themeSwitch = $('.theme-switch');
+    const nav = $('.nav');
+    const about = $('.about');
+
+    if (window.matchMedia('(max-width: 810px)').matches) {
+        if (!$.contains(nav[0], themeSwitch[0])) {
+            themeSwitch.prependTo(nav);
+        }
+    } else {
+        if (!$.contains(about[0], themeSwitch[0])) {
+            themeSwitch.appendTo(about);
+        }
+    }
+}
+
+// Вызываем функцию один раз после загрузки страницы
+moveThemeSwitch();
+
+// Добавляем обработчик события на изменение размера экрана
+window.matchMedia('(max-width: 810px)').addEventListener('change', moveThemeSwitch);
+
 // Добавили переменную "checkbox". Она будет двигать наш чекбокс в зависимости от того, какая тема включена.
 let checkbox = document.querySelector("input[name=theme-switch]");
 // Проверяем, есть ли в локальном хранилище "тёмная тема". Если есть, ставим её, переключаем чекбокс на тёмную.
@@ -110,4 +133,13 @@ $("tr").hover(function(){
   for (let i = startRow; i <= endRow; i++) {
       $table.find('tr').eq(i).removeClass("highlight");
   }
+});
+
+$(function(){
+
+	$('.up').click(function(){
+
+		$('html, body').animate({scrollTop: 0}, 400);
+		return false;
+	});
 });

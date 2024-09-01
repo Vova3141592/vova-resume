@@ -1,3 +1,5 @@
+/* Фикс анимации при загрузке страницы */
+
 .preload, .preload ::before {
     -webkit-transition: none !important;
     -moz-transition: none !important;
@@ -5,6 +7,8 @@
     -o-transition: none !important;
     transition: none !important;
 }
+
+/* Основной стиль сайта и переменные */
 
 body {
     --min-border-radius: 14px;
@@ -26,9 +30,37 @@ body {
     transition: background-color var(--transition), color var(--transition);
 }
 
+/* Кнопки, ссылки, интерактив */
+
 .highlight {
     background-color: var(--highlight-color);
 }
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+    transition: color var(--transition);
+}
+
+a:hover {
+    color: var(--accent-color-hover)
+}
+
+.button {
+    display: block;
+    cursor: pointer;
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    transition: color var(--transition), background-color var(--transition), border var(--transition), box-shadow var(--transition);
+}
+
+
+.button:hover {
+    box-shadow: 0 0 0 calc(var(--border) + 1px) var(--accent-color-hover);
+    color: var(--button-hover-text-color);
+}
+
+/* Темы */
 
 html[data-theme=light] {
     --top-color: hsla(210, 100%, 100%, 0.5);
@@ -40,6 +72,9 @@ html[data-theme=light] {
     --switch-color: hsl(210, 100%, 100%);
     --highlight-color: rgba(0, 200, 133, 0.07);
     --selection-text-color: white;
+    --button-color: hsla(210, 100%, 100%, 0.5);
+    --button-text-color: rgb(0, 150, 100);
+    --button-hover-text-color: rgb(0, 200, 133);
 }
   
 html[data-theme=dark] {
@@ -49,19 +84,12 @@ html[data-theme=dark] {
     --accent-color: rgb(0, 255, 128);
     --accent-color-hover: rgb(128, 255, 192);
     --text-color: hsl(0, 0%, 100%);
-    --switch-color: hsl(210, 30%, 95%);
+    --switch-color: black;
     --highlight-color: rgba(128, 255, 192, 0.05);
     --selection-text-color: black;
-}
-
-a {
-    text-decoration: none;
-    color: var(--accent-color);
-    transition: color var(--transition);
-}
-
-a:hover {
-    color: var(--accent-color-hover)
+    --button-color: hsla(210, 20%, 30%, 0.5);
+    --button-text-color: rgb(0, 255, 128);;
+    --button-hover-text-color: rgb(128, 255, 192);
 }
 
 p.caption {
@@ -85,10 +113,21 @@ h2 {
     background: none;
 
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
 
     gap: var(--margin);
+}
+
+/* Меню */
+
+.nav {
+    border: none;
+    background: none;
+
+    display: none;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 .flex div:not(.flex){
@@ -162,11 +201,11 @@ img {
     margin: var(--margin);
     display: block;
     width: calc(100% - 2 * var(--margin) - var(--border));
-    transition: box-shadow var(--transition);
+    transition: box-shadow var(--transition), transform var(--transition), opacity var(--transition);
 }
 
 img.clickable:hover {
-    box-shadow: 0 0 0 calc(var(--border) + 2px) var(--accent-color-hover);
+    box-shadow: 0 0 0 calc(var(--border) + 1px) var(--accent-color-hover);
 }
 
 img.zoomed {
@@ -212,7 +251,7 @@ td {
 
     .about {
         position: relative;
-        margin: 0;
+        margin: 69px 0 0 0;
         width: auto;
     }
     
@@ -223,6 +262,37 @@ td {
     .table {
         overflow-x: auto;
     }
+
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: var(--top-color);
+        z-index: 5;
+        border-bottom: var(--border) solid var(--border-color);
+        backdrop-filter: blur(4px);
+        transition: border var(--transition), background-color var(--transition);
+    }
+
+    .theme-switch {
+        top: 6px;
+        left: 6px !important;
+    }
+
+    .moon {
+        right: 25px !important;
+        bottom: -2px !important;
+    }
+
+    .sun {
+        right: 23px !important;
+        bottom: -4px !important;
+    }
+
+    .nav {
+        display: flex;
+    }
+
 }
 
 .theme-switch {
@@ -230,14 +300,14 @@ td {
     display: inline-block;
     width: 54px;
     height: 27px;
-    left: 140px;
+    left: 41%;
     border-radius: 30px;
-    border: calc(var(--border) + 2px) solid transparent;
+    border: calc(var(--border) + 1px) solid transparent;
     transition: border var(--transition);
 }
 
 .theme-switch:hover {
-    border: calc(var(--border) + 2px) solid var(--accent-color-hover);
+    border: calc(var(--border) + 1px) solid var(--accent-color-hover);
 }
 
 .theme-switch input {
@@ -251,13 +321,13 @@ td {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: hsl(210, 20%, 80%);
+    background-color: hsla(210, 30%, 80%, 0.5);
     border-radius: 14px;
     border: var(--border) solid var(--border-color);
     transition: background-color var(--transition), border var(--transition);
 }
- 
-.slider:before {
+
+.slider::before {
     position: absolute;
     content: "";
     height: 22px;
@@ -265,24 +335,24 @@ td {
     left: 2px;
     bottom: 2px;
     background-color: var(--switch-color);
-    transition: transform var(--transition);
+    transition: background-color var(--transition), transform var(--transition);
     border-radius: 14px;
 }
  
 input:checked + .slider {
-    background-color: hsl(210, 20%, 20%);
+    background-color: hsla(210, 20%, 30%, 0.5);
 }
 
 input:checked + .slider:before {
     transform: translateX(26px);
 }
 
-input:checked ~ .moon {
+input:checked ~ .sun {
     opacity: 0;
     transform: translateX(26px);
 }
 
-.moon {
+.sun {
     border: none;
     cursor: pointer;
     position: absolute;
@@ -290,5 +360,20 @@ input:checked ~ .moon {
     width: 19px;
     right: 21px;
     bottom: -6px;
-    transition: transform var(--transition), opacity var(--transition);
+}
+
+input:checked ~ .moon {
+    opacity: 1;
+    transform: translateX(26px);
+}
+
+.moon {
+    opacity: 0;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    right: 23px;
+    bottom: -4px;
 }
