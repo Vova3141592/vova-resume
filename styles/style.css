@@ -324,7 +324,7 @@ td {
     display: inline-block;
     width: 54px;
     height: 27px;
-    left: 40%;
+    left: 41%;
     border-radius: 30px;
     transition: box-shadow var(--transition);
 }
