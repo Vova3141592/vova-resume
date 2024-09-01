@@ -269,6 +269,10 @@ td {
         transition: border var(--transition), background-color var(--transition);
     }
 
+    .slider::before {
+        bottom: 1px !important;
+    }
+
     .theme-switch {
         top: 12px;
         left: 6px !important;
@@ -344,7 +348,7 @@ td {
     height: 22px;
     width: 22px;
     left: 2px;
-    bottom: 1px;
+    bottom: 2px;
     background-color: var(--switch-color);
     transition: background-color var(--transition), transform var(--transition);
     border-radius: 14px;
