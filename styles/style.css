@@ -30,6 +30,10 @@ body {
     transition: background-color var(--transition), color var(--transition);
 }
 
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
 /* Кнопки, ссылки, интерактив */
 
 .highlight {
