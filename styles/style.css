@@ -121,7 +121,7 @@ h2 {
 /* Меню */
 
 .nav {
-    margin: 0px 8px;
+    margin: 0 16px;
     border: none;
     background: none;
 
@@ -276,7 +276,7 @@ td {
     }
 
     .theme-switch {
-        top: 6px;
+        top: 8px;
         left: 6px !important;
     }
 
