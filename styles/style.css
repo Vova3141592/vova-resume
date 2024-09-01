@@ -51,6 +51,7 @@ a {
     cursor: pointer;
     background-color: var(--button-color);
     color: var(--button-text-color);
+    user-select: none;
     transition: color var(--transition), background-color var(--transition), border var(--transition), box-shadow var(--transition);
 }
 
@@ -372,6 +373,7 @@ input:checked ~ .sun {
 }
 
 .sun {
+    user-select: none;
     border: none;
     cursor: pointer;
     position: absolute;
@@ -387,6 +389,7 @@ input:checked ~ .moon {
 }
 
 .moon {
+    user-select: none;
     opacity: 0;
     border: none;
     cursor: pointer;
