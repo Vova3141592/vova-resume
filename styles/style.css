@@ -121,6 +121,7 @@ h2 {
 /* Меню */
 
 .nav {
+    margin: 0px 8px;
     border: none;
     background: none;
 
@@ -251,7 +252,7 @@ td {
 
     .about {
         position: relative;
-        margin: 69px 0 0 0;
+        margin: 56px 0 0 0;
         width: auto;
     }
     
