@@ -17,10 +17,6 @@ body {
     --about-width: 328px;
     --transition: 200ms;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
     margin: 0;
     font-size: 12pt;
     font-family: "calibri";
@@ -28,6 +24,15 @@ body {
     color: var(--text-color);
 
     transition: background-color var(--transition), color var(--transition);
+}
+
+.main {
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 * {
@@ -49,7 +54,6 @@ a {
 .button {
     display: block;
     cursor: pointer;
-    background-color: var(--button-color);
     color: var(--button-text-color);
     user-select: none;
     transition: color var(--transition), background-color var(--transition), border var(--transition), box-shadow var(--transition);
@@ -68,12 +72,12 @@ html[data-theme=light] {
     --background-color: hsl(210, 30%, 90%);
     --accent-color: rgb(0, 150, 100);
     --accent-color-hover: rgb(0, 228, 152);
-    --text-color: hsl(0, 25%, 2%);
+    --text-color: hsl(0, 0%, 0%);
     --switch-color: hsl(210, 100%, 100%);
     --highlight-color: rgba(0, 200, 133, 0.07);
     --selection-text-color: white;
 
-    --button-color: hsla(210, 100%, 100%, 0.5);
+    --button-color: rgba(0, 200, 133, 0.07);
     --button-text-color: rgb(0, 150, 100);
     --button-hover-text-color: rgb(0, 200, 133);
     --button-click-color: hsla(210, 100%, 100%, 1);
@@ -90,7 +94,7 @@ html[data-theme=dark] {
     --highlight-color: rgba(128, 255, 192, 0.05);
     --selection-text-color: black;
 
-    --button-color: hsla(210, 20%, 30%, 0.5);
+    --button-color: rgba(128, 255, 192, 0.05);
     --button-text-color: rgb(0, 255, 128);
     --button-hover-text-color: rgb(128, 255, 192);
     --button-click-color: hsla(210, 20%, 60%, 0.5);
@@ -250,6 +254,9 @@ td {
     body {
         --margin: 8px;
         --min-border-radius: 17px;
+    }
+
+    .main {
         display: block;
     }
 
@@ -360,7 +367,7 @@ td {
 }
  
 input:checked + .slider {
-    background-color: hsla(210, 20%, 30%, 0.5);
+    background-color: var(--top-color);
 }
 
 input:checked + .slider:before {
@@ -398,6 +405,10 @@ input:checked ~ .moon {
     width: 15px;
     right: 23px;
     bottom: -4px;
+}
+
+.footer {
+    text-align: center;
 }
 
 @font-face {

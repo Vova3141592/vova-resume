@@ -14,276 +14,265 @@
             <div class="dep-4 button up"><p>↑ Наверх</p></div>
         </div>
     </nav>
-    <div class="about">
-        <div class="dep-1">
-            <a href="images/vova-full.jpg" target="_blank"><img class="dep-2 clickable zoomed" src="images/vova.jpg" alt="Фотография"/></a>
-            <h1 class="caption">Вова Воложанинов</h1><p class="caption">Системный администратор, стажёр</p>
-            <div class="dep-2">
-                <p>Свяжитесь со мной:</p>
-                <div class="flex">
-                    <div class="dep-3"><p><a href="mailto:vova@volozhaninov.art" target="_blank">vova@volozhaninov.art</a></p></div>
-                    <div class="dep-3"><p><a href="tel:+79504460600">+79504460600</a></p></div>
-                    <div class="dep-3"><p><a href="https://t.me/vova3141592" target="_blank">Телеграм</a></p></div>
-                    <div class="dep-3"><p><a href="https://vk.com/vova3141592" target="_blank">ВКонтакте</a></p></div>
-                    <div class="dep-3"><p><a href="https://vk.com/vova3141592" target="_blank">LinkedIn</a></p></div>
-                </div>
-            </div>
-        </div>
-        <label class="theme-switch">
-            <input type="checkbox" name="theme-switch">
-            <span class="slider"></span>
-            <img src="images/sun.svg" alt="Светлая тема" class="sun"/>
-            <img src="images/moon.svg" alt="Тёмная тема" class="moon"/>
-        </label>
-    </div>
-    <div class="other">
-        <div class="dep-1">
-            <h1>Где работал? Сходил на две производственные практики</h1>
-            <div class="dep-2 table">
-                <table>
-                    <tr>
-                        <th>Когда?</th><th>Где?</th><th>Что делал?</th><th>Чем похвастаюсь?</th>
-                    </tr>
-                    <tr>
-                        <td rowspan="2">23 марта 2023 г. — 19 апреля 2023 г. (4 недели)</td><td rowspan="2">Центр гигиены и эпидемиологии в Пермском крае</td><td rowspan="2">Автоматизировал рабочие процессы</td><td>Сделал скрипт в программе Clickermann для автоматической отправки сертификатов соответствия в Национальную систему аккредитации. Раньше сертификаты отправляли 3 человека, теперь эти люди освободились.</td>
-                    </tr>
-                    <tr>
-                        <td>Ускорил загрузку страницы для отправки сертификатов с 20 секунд до 100 миллисекунд (в 200 раз), выключив расширением Custom-css блокировку страницы, пока всё содержимое не загрузится (получилась асинхронная загрузка).</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="2">23 июня 2022 г. — 13 июля 2022 г. (3 недели)</td><td rowspan="2">Центр безопасности дорожного движения Пермского края</td><td rowspan="2">Чинил компьютеры и исправлял проблемы с сетью</td><td>Обновил корневые сертификаты на компьютере с Windows 7, чтобы сайты снова открывались. Сертификаты не обновлялись автоматически, ведь поддержка Windows 7 закончилась.</td>
-                    </tr>
-                    <tr>
-                        <td>«Починил» выключающийся компьютер, выключив энергосбережение в BIOS.</td>
-                    </tr>
-                </table>
-            </div>  
-        </div>
-        <div class="dep-1">
-            <h1>Где учился? В колледже</h1>
-            <div class="dep-2 table">
-                <table>
-                    <tr><th>Когда?</th><th>Где?</th><th>По какой пециальности?</th><th>В чём подвох?</th></tr>
-                    <tr><td>2019-2023 гг.</td><td>Колледж профессионального образования пермского государственного национального исследовательского университета</td><td>Сетевое и системное администрирование</td><td>Проучился 4 курса, но не написал дипломный проект, поэтому отчислили.</td></tr>
-                </table>
-            </div>
-        </div>
-        <div class="dep-1">
-            <h1>Какие личные проекты создал?</h1>
-            <div class="dep-2">
-                <a href="https://vpn.volozhaninov.art/" target="_blank"><img class="dep-3 clickable" src="images/vova-vpn.png" alt="VovaVPN"/></a>
-                <h2>Прокси-сервер, чтобы обходить блокировки</h2>
-                <div class="dep-3"><p>Сделал <a href="https://vpn.volozhaninov.art/" target="_blank">сайт</a> с инструкцией для подключения.</p></div>
-                <div class="dep-3">
-                    <p>Сделал 2 способа подключиться к прокси-серверу:</p>
-                    <div class="dep-4"><p>Маскировка под свой сайт по протоколу VLESS с gRPC в качестве транспорта. Для защиты сервера использую цепочку серверов: клиент → CDN Cloudflare → Nginx → Xray → Cloudflare WARP → интернет.</p></div>
-                    <div class="dep-4"><p>Маскировка под популярный сайт по протоколу VLESS XTLS-Reality. Для защиты сервера использую цепочку серверов: клиент → Xray → Cloudflare WARP → интернет.</p></div>
-                </div>
-                <div class="dep-3">
-                    <p>Использовал технологии:</p>
+    <div class="main">
+        <div class="about">
+            <div class="dep-1">
+                <a href="images/vova-full.jpg" target="_blank"><img class="dep-2 clickable zoomed" src="images/vova.jpg" alt="Фотография"/></a>
+                <h1 class="caption">Вова Воложанинов</h1><p class="caption">Системный администратор, стажёр</p>
+                <div class="dep-2">
+                    <p>Свяжитесь со мной:</p>
                     <div class="flex">
-                        <div class="dep-4"><p>Debian</p></div>
-                        <div class="dep-4"><p>Docker</p></div>
-                        <div class="dep-4"><p>Alpine Linux</p></div>
-                        <div class="dep-4"><p>Nginx</p></div>
-                        <div class="dep-4"><p>Xray-core</p></div>
-                        <div class="dep-4"><p>3X-UI</p></div>
-                        <div class="dep-4"><p>Certbot</p></div>
-                        <div class="dep-4"><p>VDSina</p></div>
-                        <div class="dep-4"><p>Cloudflare</p></div>
-                        <div class="dep-4"><p>VitePress</p></div>
-                        <div class="dep-4"><p>GitHub Actions</p></div>
-                        <div class="dep-4"><p>GitHub Pages</p></div>
-                    </div>  
-                </div>
-            </div>
-            <div class="dep-2">
-                <a href="https://store.volozhaninov.art/" target="_blank"><img class="dep-3 clickable" src="images/skins.jpg" alt="VovaVPN"/></a>
-                <h2>Домашний веб-сервер</h2>
-                <div class="dep-3">
-                    <p>Сайты на домашнем сервере:</p>
-                    <div class="flex">
-                        <div class="dep-4"><p><a href="https://store.volozhaninov.art/" target="_blank">Магазин скинов</a></p></div>
-                        <div class="dep-4"><p><a href="https://volozhaninov.art/" target="_blank">Программа тренировок</a></p></div>
-                    </div>
-                </div>
-                <div class="dep-3">
-                    <p>Особенности:</p>
-                    <div class="flex">
-                        <div class="dep-4"><p>Сервер сделал из ноутбука.</p></div>
-                        <div class="dep-4"><p>Чтобы не покупать статичный IP-адрес, релизовал DDNS с помощью ddclient и Cloudflare.</p></div>
-                    </div>
-                </div>
-                <div class="dep-3">
-                    <p>Использовал технологии:</p>
-                    <div class="flex">
-                        <div class="dep-4"><p>Debian</p></div>
-                        <div class="dep-4"><p>Certbot</p></div>
-                        <div class="dep-4"><p>ddclient</p></div>
-                        <div class="dep-4"><p>Cloudflare</p></div>
-                        <div class="dep-4"><p>Apache</p></div>
-                        <div class="dep-4"><p>PHP</p></div>
-                        <div class="dep-4"><p>MariaDB</p></div>
-                        <div class="dep-4"><p>Qiwi PHP SDK</p></div>
-                        <div class="dep-4"><p>HTML</p></div>
-                        <div class="dep-4"><p>CSS</p></div>
+                        <a href="mailto:vova@volozhaninov.art" target="_blank"><div class="dep-3 button"><p>vova@volozhaninov.art</p></div></a>
+                        <a href="tel:+79504460600"><div class="dep-3 button"><p>+79504460600</p></div></a>
+                        <a href="https://t.me/vova3141592" target="_blank"><div class="dep-3 button"><p>Телеграм</p></div></a>
+                        <a href="https://vk.com/vova3141592" target="_blank"><div class="dep-3 button"><p>ВКонтакте</p></div></a>
+                        <a href="https://vk.com/vova3141592" target="_blank"><div class="dep-3 button"><p>LinkedIn</p></div></a>
                     </div>
                 </div>
             </div>
+            <label class="theme-switch">
+                <input type="checkbox" name="theme-switch">
+                <span class="slider"></span>
+                <img src="images/sun.svg" alt="Светлая тема" class="sun"/>
+                <img src="images/moon.svg" alt="Тёмная тема" class="moon"/>
+            </label>
         </div>
-        <div  class="dep-1">
-            <h1>Какими инструментами пользовался?</h1>
-            <div class="dep-2">
-                <p>Чтобы автоматизировать:</p>
-                <div class="flex">
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/Git" target="_blank">Git</a></p></div>
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/Docker" target="_blank">Docker</a></p></div>
-                    <div class="dep-3"><p><a href="http://crapware.aidf.org/" target="_blank">Clickermann</a></p></div>
-                    <div class="dep-3"><p><a href="https://docs.github.com/ru/actions" target="_blank">GitHub Actions</a></p></div>
+        <div class="other">
+            <div class="dep-1">
+                <h1>Где работал? Сходил на две производственные практики</h1>
+                <div class="dep-2 table">
+                    <table>
+                        <tr>
+                            <th>Когда?</th><th>Где?</th><th>Что делал?</th><th>Чем похвастаюсь?</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">2023 г. (4 недели)</td><td rowspan="2">Центр гигиены и эпидемиологии в Пермском крае</td><td rowspan="2">Автоматизировал рабочие процессы</td><td>Сделал скрипт в программе Clickermann для автоматической отправки сертификатов соответствия в Национальную систему аккредитации. Раньше сертификаты отправляли 3 человека, теперь эти люди освободились.</td>
+                        </tr>
+                        <tr>
+                            <td>Ускорил загрузку страницы для отправки сертификатов с 20 секунд до 100 миллисекунд (в 200 раз), выключив расширением Custom-css блокировку страницы, пока всё содержимое не загрузится (получилась асинхронная загрузка).</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">2022 г. (3 недели)</td><td rowspan="2">Центр безопасности дорожного движения Пермского края</td><td rowspan="2">Чинил компьютеры и исправлял проблемы с сетью</td><td>Обновил корневые сертификаты на компьютере с Windows 7, чтобы сайты снова открывались. Сертификаты не обновлялись автоматически, ведь поддержка Windows 7 закончилась.</td>
+                        </tr>
+                        <tr>
+                            <td>«Починил» выключающийся компьютер, выключив энергосбережение в BIOS.</td>
+                        </tr>
+                    </table>
+                </div>  
+            </div>
+            <div class="dep-1">
+                <h1>Где учился? В колледже</h1>
+                <div class="dep-2 table">
+                    <table>
+                        <tr><th>Когда?</th><th>Где?</th><th>По какой пециальности?</th><th>В чём подвох?</th></tr>
+                        <tr><td>2019-2023 гг.</td><td>Колледж профессионального образования пермского государственного национального исследовательского университета</td><td>Сетевое и системное администрирование</td><td>Проучился 4 курса, но не написал дипломный проект, поэтому отчислили.</td></tr>
+                    </table>
                 </div>
             </div>
-            <div class="dep-2">
-                <p>Операционные системы:</p>
-                <div class="flex">
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/Debian" target="_blank">Debian</a></p></div>
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/Ubuntu" target="_blank">Ubuntu</a></p></div>
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/Linux_Mint" target="_blank">Linux Mint</a></p></div>
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/Alpine_Linux" target="_blank">Alpine Linux</a></p></div>
-                </div>
-            </div>
-            <div class="dep-2">
-                <p>Чтобы управлять Linux:</p>
-                <div class="flex">
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/Fdisk" target="_blank">Fdisk</a></p></div>
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/GNU_GRUB" target="_blank">GRUB</a></p></div>
-                    <div class="dep-3"><p><a href="https://certbot.eff.org/" target="_blank">Certbot</a></p></div>
-                    <div class="dep-3"><p><a href="https://ddclient.net/" target="_blank">Ddclient</a></p></div>
-                </div>
-            </div>
-            <div class="dep-2">
-                <p>Прокси- и веб-серверы:</p>
-                <div class="flex">
-                    <div class="dep-3"><p><a href="https://github.com/XTLS/Xray-core" target="_blank">Xray</a></p></div>
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/Nginx" target="_blank">Nginx</a></p></div>
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/Apache_HTTP_Server" target="_blank">Apache</a></p></div>
-                </div>
-            </div>
-            <div class="dep-2">
-                <p>Для сайтов:</p>
-                <div class="flex">
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/CSS" target="_blank">CSS</a></p></div>
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/HTML" target="_blank">HTML</a></p></div>
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/Node.js" target="_blank">Node.js</a></p></div>
-                    <div class="dep-3"><p><a href="https://vitepress.dev/" target="_blank">VitePress</a></p></div>
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a></p></div>
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/JQuery" target="_blank">jQuery</a></p></div>
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/WordPress" target="_blank">WordPress</a></p></div>
-                </div>
-            </div>
-            <div class="dep-2">
-                <p>Чтобы считать:</p>
-                <div class="flex">
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/Microsoft_Excel" target="_blank">Excel</a></p></div>
-                    <div class="dep-3"><p><a href="https://www.gambit-project.org/" target="_blank">Gambit</a></p></div>
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/Desmos_(%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80)" target="_blank">Desmos</a></p></div>
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/WolframAlpha" target="_blank">WolframAlpha</a></p></div>
-                    <div class="dep-3"><p><a href="https://www.bayesfusion.com/genie/" target="_blank">GeNIe Modeler</a></p></div>
-                </div>
-            </div>
-            <div class="dep-2">
-                <p>Чтобы писать:</p>
-                <div class="flex">
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/Vim" target="_blank">Vim</a></p></div>
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/LaTeX" target="_blank">LaTeX</a></p></div>
-                    <div class="dep-3 "><p><a href="https://ru.wikipedia.org/wiki/Logseq" target="_blank">Logseq</a></p></div>
-                    <div class="dep-3"><p><a href="https://openai.com/index/gpt-4/" target="_blank">GPT-4o</a></p></div>
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/Markdown" target="_blank">Markdown</a></p></div>
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/Visual_Studio_Code" target="_blank">Visual Studio Code</a></p></div>
-                </div>
-            </div>
-            <div class="dep-2">
-                <p>Чтобы дизайнить:</p>
-                <div class="flex">
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/Blender" target="_blank">Blender</a></p></div>
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/Adobe_Photoshop" target="_blank">Photoshop</a></p></div>
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/Cinema_4D" target="_blank">Cinema 4D</a></p></div>
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/DAZ_Studio" target="_blank">DAZ Studio</a></p></div>
-                    <div class="dep-3"><p><a href="https://blackforestlabs.ai/" target="_blank">FLUX.1 [pro]</a></p></div>
-                    <div class="dep-3"><p><a href="https://ru.wikipedia.org/wiki/Stable_Diffusion" target="_blank">Stable Diffusion</a></p></div>
-                    <div class="dep-3"><p><a href="https://lch.oklch.com" target="_blank">LCH Color Picker</a></p></div>
-                </div>
-            </div>
-            <div class="dep-2">
-                <p>Облачные технологии:</p>
-                <div class="dep-3">
-                    <p>IaaS:</p>
-                    <div class="flex"><div class="dep-4"><p><a href="https://www.vdsina.com/" target="_blank">VDSina</a></p></div></div>
-                </div>
-                <div class="dep-3">
-                    <p>PaaS:</p>
-                    <div class="flex">
-                        <div class="dep-4"><p><a href="https://www.reg.ru/" target="_blank">Reg.ru</a></p></div>
-                        <div class="dep-4"><p><a href="https://www.hostinger.co.uk" target="_blank">Hostinger</a></p></div>
-                        <div class="dep-4"><p><a href="https://ru.wikipedia.org/wiki/Cloudflare" target="_blank">Cloudflare</a></p></div>
-                        <div class="dep-4"><p><a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p></div>
-                    </div>
-                </div>
-                <div class="dep-3">
-                    <p>SaaS:</p>
-                    <div class="flex"><div class="dep-4"><p><a href="https://biz.mail.ru/" target="_blank">VK WorkSpace</a></p></div></div>
-                </div>
-            </div>
-        </div>
-        <div class="dep-1">
-            <h1>Какой я человек?</h1>
-            <div class="dep-2">
-                <p>Знаю русский и немножко — английский:</p>
-                <div class="flex">
-                    <div class="dep-3"><p>Русский знаю достаточно, чтобы работать корректором.</p></div>
-                    <div class="dep-3"><p>Английский знаю достаточно, чтобы читать научные статьи. Предпочитаю переводить, но когда переводчик не срабатывает, читаю на английском.</p></div>
-                </div>
-            </div>
-            <div class="dep-2">
-                <p>Умею руководить:</p>
-                <div class="flex">
-                    <div class="dep-3"><p>Применяю теорию игр в отношениях.</p></div>
-                    <div class="dep-3"><p>Был командиром отряда на военных сборах.</p></div>
+            <div class="dep-1">
+                <h1>Какие личные проекты создал?</h1>
+                <div class="dep-2">
+                    <a href="https://vpn.volozhaninov.art/" target="_blank"><img class="dep-3 clickable" src="images/vova-vpn.png" alt="VovaVPN"/></a>
+                    <h2>Прокси-сервер, чтобы обходить блокировки</h2>
+                    <div class="flex"><a href="https://vpn.volozhaninov.art/" target="_blank"><div class="dep-3 button"><p>Сделал сайт с инструкцией для подключения</p></div></a></div>
                     <div class="dep-3">
-                        <p>Управлял <a href="https://vk.com/thebuilderhd" target="_blank">строительной командой</a> в игре Minecraft:</p>
+                        <p>Сделал 2 способа подключиться к прокси-серверу:</p>
+                        <div class="dep-4"><p>Маскировка под свой сайт по протоколу VLESS с gRPC в качестве транспорта. Для защиты сервера использую цепочку серверов: клиент → CDN Cloudflare → Nginx → Xray → Cloudflare WARP → интернет.</p></div>
+                        <div class="dep-4"><p>Маскировка под популярный сайт по протоколу VLESS XTLS-Reality. Для защиты сервера использую цепочку серверов: клиент → Xray → Cloudflare WARP → интернет.</p></div>
+                    </div>
+                    <div class="dep-3">
+                        <p>Использовал технологии:</p>
                         <div class="flex">
-                            <div class="dep-4"><p>Покупал рекламу</p></div>
-                            <div class="dep-4"><p>Платил «зарплаты»</p></div>
-                            <div class="dep-4"><p>Разрешал конфликты</p></div>
-                            <div class="dep-4"><p>Нанимал строителей (нас было 7 человек)</p></div>
-                            <div class="dep-4"><p>Годовой оборот был примерно $ 30,000</p></div>
+                            <div class="dep-4"><p>Debian</p></div>
+                            <div class="dep-4"><p>Docker</p></div>
+                            <div class="dep-4"><p>Alpine Linux</p></div>
+                            <div class="dep-4"><p>Nginx</p></div>
+                            <div class="dep-4"><p>Xray-core</p></div>
+                            <div class="dep-4"><p>3X-UI</p></div>
+                            <div class="dep-4"><p>Certbot</p></div>
+                            <div class="dep-4"><p>VDSina</p></div>
+                            <div class="dep-4"><p>Cloudflare</p></div>
+                            <div class="dep-4"><p>VitePress</p></div>
+                            <div class="dep-4"><p>GitHub Actions</p></div>
+                            <div class="dep-4"><p>GitHub Pages</p></div>
+                        </div>  
+                    </div>
+                </div>
+                <div class="dep-2">
+                    <a href="https://store.volozhaninov.art/" target="_blank"><img class="dep-3 clickable" src="images/skins.jpg" alt="VovaVPN"/></a>
+                    <h2>Домашний веб-сервер</h2>
+                    <div class="dep-3">
+                        <p>Сайты на домашнем сервере:</p>
+                        <div class="flex">
+                            <a href="https://store.volozhaninov.art/" target="_blank"><div class="dep-4 button"><p>Магазин скинов</p></div></a>
+                            <a href="https://volozhaninov.art/" target="_blank"><div class="dep-4 button"><p>Программа тренировок</p></div></a>
+                        </div>
+                    </div>
+                    <div class="dep-3">
+                        <p>Особенности:</p>
+                        <div class="flex">
+                            <div class="dep-4"><p>Сервер сделал из ноутбука.</p></div>
+                            <div class="dep-4"><p>Чтобы не покупать статичный IP-адрес, релизовал DDNS с помощью ddclient и Cloudflare.</p></div>
+                        </div>
+                    </div>
+                    <div class="dep-3">
+                        <p>Использовал технологии:</p>
+                        <div class="flex">
+                            <div class="dep-4"><p>Debian</p></div>
+                            <div class="dep-4"><p>Certbot</p></div>
+                            <div class="dep-4"><p>ddclient</p></div>
+                            <div class="dep-4"><p>Cloudflare</p></div>
+                            <div class="dep-4"><p>Apache</p></div>
+                            <div class="dep-4"><p>PHP</p></div>
+                            <div class="dep-4"><p>MariaDB</p></div>
+                            <div class="dep-4"><p>Qiwi PHP SDK</p></div>
+                            <div class="dep-4"><p>HTML</p></div>
+                            <div class="dep-4"><p>CSS</p></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="dep-2">
-                <p>Не специалист: умею делать разные вещи, а не только что-то одно:</p>
-                <div class="flex">
-                    <div class="dep-3"><p>Пишу <a href="https://vk.com/@533955585-stihi" target="_blank">стихи</a></p></div>
-                    <div class="dep-3"><p><a href="https://vk.com/vova3141592?w=narrative533955585_91897_456239018" target="_blank">Прогнозирую</a></p></div>
-                    <div class="dep-3"><p><a href="https://vk.com/club209892512?z=album-209892512_301149671" target="_blank">Фотографирую</a></p></div>
-                    <div class="dep-3"><p>Создаю дизайн</p></div>
-                    <div class="dep-3"><p>Пишу <a href="https://vk.com/@533955585-rasskazy" target="_blank">рассказы</a></p></div>
-                    <div class="dep-3"><p>Сочиняю <a href="https://vk.com/vova3141592" target="_blank">музыку</a></p></div>
-                    <div class="dep-3"><p>Создаю <a href="https://www.artstation.com/thebuilderhd" target="_blank">картинки</a></p></div>
-                    <div class="dep-3"><p>Решаю головоломки</p></div>
-                    <div class="dep-3"><p><a href="https://klavogonki.ru/u/#/634248/" target="_blank">Печатаю</a> на скорость</p></div>
-                    <div class="dep-3"><p><a href="https://vk.com/video/@vova3141592" target="_blank">Выступаю</a> с лекциями</p></div>
-                    <div class="dep-3"><p><a href="https://sci.volozhaninov.art/" target="_blank">Применяю</a> формальные науки в жизни</p></div>
-                </div>
-                <div class="dep-3">
-                    <p>Пишу обзорные статьи:</p>
+            <div class="dep-1">
+                <h1>Какими инструментами пользовался?</h1>
+                <div class="dep-2">
+                    <p>Чтобы автоматизировать:</p>
                     <div class="flex">
-                        <div class="dep-4"><p><a href="https://quit.volozhaninov.art/" target="_blank">«Алгоритм, как бросить курить»</a></p></div>
-                        <div class="dep-4"><p><a href="https://pa.volozhaninov.art/" target="_blank">«Что делать с паническими атаками?</a></p></div>
+                        <a href="https://ru.wikipedia.org/wiki/Git" target="_blank"><div class="dep-3 button"><p>Git</p></div></a>
+                        <a href="https://ru.wikipedia.org/wiki/Docker" target="_blank"><div class="dep-3 button"><p>Docker</p></div></a>
+                        <a href="http://crapware.aidf.org/" target="_blank"><div class="dep-3 button"><p>Clickermann</p></div></a>
+                        <a href="https://docs.github.com/ru/actions" target="_blank"><div class="dep-3 button"><p>GitHub Actions</p></div></a>
+                    </div>
+                </div>
+                <div class="dep-2">
+                    <p>Операционные системы:</p>
+                    <div class="flex">
+                        <a href="https://ru.wikipedia.org/wiki/Debian" target="_blank"><div class="dep-3 button"><p>Debian</p></div></a>
+                        <a href="https://ru.wikipedia.org/wiki/Ubuntu" target="_blank"><div class="dep-3 button"><p>Ubuntu</p></div></a>
+                        <a href="https://ru.wikipedia.org/wiki/Linux_Mint" target="_blank"><div class="dep-3 button"><p>Linux Mint</p></div></a>
+                        <a href="https://ru.wikipedia.org/wiki/Alpine_Linux" target="_blank"><div class="dep-3 button"><p>Alpine Linux</p></div></a>
+                    </div>
+                </div>
+                <div class="dep-2">
+                    <p>Чтобы управлять Linux:</p>
+                    <div class="flex">
+                        <a href="https://ru.wikipedia.org/wiki/Fdisk" target="_blank"><div class="dep-3 button"><p>Fdisk</p></div></a>
+                        <a href="https://ru.wikipedia.org/wiki/GNU_GRUB" target="_blank"><div class="dep-3 button"><p>GRUB</p></div></a>
+                        <a href="https://certbot.eff.org/" target="_blank"><div class="dep-3 button"><p>Certbot</p></div></a>
+                        <a href="https://ddclient.net/" target="_blank"><div class="dep-3 button"><p>Ddclient</p></div></a>
+                    </div>
+                </div>
+                <div class="dep-2">
+                    <p>Прокси- и веб-серверы:</p>
+                    <div class="flex">
+                        <a href="https://github.com/XTLS/Xray-core" target="_blank"><div class="dep-3 button"><p>Xray</p></div></a>
+                        <a href="https://ru.wikipedia.org/wiki/Nginx" target="_blank"><div class="dep-3 button"><p>Nginx</p></div></a>
+                        <a href="https://ru.wikipedia.org/wiki/Apache_HTTP_Server" target="_blank"><div class="dep-3 button"><p>Apache</p></div></a>
+                    </div>
+                </div>
+                <div class="dep-2">
+                    <p>Для сайтов:</p>
+                    <div class="flex">
+                        <a href="https://ru.wikipedia.org/wiki/CSS" target="_blank"><div class="dep-3 button"><p>CSS</p></div></a>
+                        <a href="https://ru.wikipedia.org/wiki/HTML" target="_blank"><div class="dep-3 button"><p>HTML</p></div></a>
+                        <a href="https://ru.wikipedia.org/wiki/Node.js" target="_blank"><div class="dep-3 button"><p>Node.js</p></div></a>
+                        <a href="https://vitepress.dev/" target="_blank"><div class="dep-3 button"><p>VitePress</p></div></a>
+                        <a href="https://ru.wikipedia.org/wiki/JavaScript" target="_blank"><div class="dep-3 button"><p>JavaScript</p></div></a>
+                        <a href="https://ru.wikipedia.org/wiki/JQuery" target="_blank"><div class="dep-3 button"><p>jQuery</p></div></a>
+                        <a href="https://ru.wikipedia.org/wiki/WordPress" target="_blank"><div class="dep-3 button"><p>WordPress</p></div></a>
+                    </div>
+                </div>
+                <div class="dep-2">
+                    <p>Чтобы считать:</p>
+                    <div class="flex">
+                        <a href="https://ru.wikipedia.org/wiki/Microsoft_Excel" target="_blank"><div class="dep-3 button"><p>Excel</p></div></a>
+                        <a href="https://www.gambit-project.org/" target="_blank"><div class="dep-3 button"><p>Gambit</p></div></a>
+                        <a href="https://ru.wikipedia.org/wiki/Desmos_(%D0%BA%D0%B0%D0%BB%D1%8C%D0%BA%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80)" target="_blank"><div class="dep-3 button"><p>Desmos</p></div></a>
+                        <a href="https://ru.wikipedia.org/wiki/WolframAlpha" target="_blank"><div class="dep-3 button"><p>WolframAlpha</p></div></a>
+                        <a href="https://www.bayesfusion.com/genie/" target="_blank"><div class="dep-3 button"><p>GeNIe Modeler</p></div></a>
+                    </div>
+                </div>
+                <div class="dep-2">
+                    <p>Чтобы писать:</p>
+                    <div class="flex">
+                        <a href="https://ru.wikipedia.org/wiki/Vim" target="_blank"><div class="dep-3 button"><p>Vim</p></div></a>
+                        <a href="https://ru.wikipedia.org/wiki/LaTeX" target="_blank"><div class="dep-3 button"><p>LaTeX</p></div></a>
+                        <a href="https://ru.wikipedia.org/wiki/Logseq" target="_blank"></a><div class="dep-3 button"><p>Logseq</p></div></a>
+                        <a href="https://openai.com/index/gpt-4/" target="_blank"><div class="dep-3 button"><p>GPT-4o</p></div></a>
+                        <a href="https://ru.wikipedia.org/wiki/Markdown" target="_blank"><div class="dep-3 button"><p>Markdown</p></div></a>
+                        <a href="https://ru.wikipedia.org/wiki/Visual_Studio_Code" target="_blank"><div class="dep-3 button"><p>Visual Studio Code</p></div></a>
+                    </div>
+                </div>
+                <div class="dep-2">
+                    <p>Облачные технологии:</p>
+                    <div class="dep-3">
+                        <p>IaaS:</p>
+                        <div class="flex"><a href="https://www.vdsina.com/" target="_blank"><div class="dep-4 button"><p>VDSina</p></div></div></a>
+                    </div>
+                    <div class="dep-3">
+                        <p>PaaS:</p>
+                        <div class="flex">
+                            <a href="https://www.reg.ru/" target="_blank"><div class="dep-4 button"><p>Reg.ru</p></div></a>
+                            <a href="https://www.hostinger.co.uk" target="_blank"><div class="dep-4 button"><p>Hostinger</p></div></a>
+                            <a href="https://ru.wikipedia.org/wiki/Cloudflare" target="_blank"><div class="dep-4 button"><p>Cloudflare</p></div></a>
+                            <a href="https://pages.github.com/" target="_blank"><div class="dep-4 button"><p>GitHub Pages</p></div></a>
+                        </div>
+                    </div>
+                    <div class="dep-3">
+                        <p>SaaS:</p>
+                        <a href="https://biz.mail.ru/" target="_blank"><div class="flex"><div class="dep-4 button"><p>VK WorkSpace</p></div></div></a>
+                    </div>
+                </div>
+            </div>
+            <div class="dep-1">
+                <h1>Какой я человек?</h1>
+                <div class="dep-2">
+                    <p>Знаю русский и немножко — английский:</p>
+                    <div class="flex">
+                        <div class="dep-3"><p>Русский знаю достаточно, чтобы работать корректором.</p></div>
+                        <div class="dep-3"><p>Английский знаю достаточно, чтобы читать научные статьи. Предпочитаю переводить, но когда переводчик не срабатывает, читаю на английском.</p></div>
+                    </div>
+                </div>
+                <div class="dep-2">
+                    <p>Умею руководить:</p>
+                    <div class="flex">
+                        <div class="dep-3"><p>Применяю теорию игр в отношениях.</p></div>
+                        <div class="dep-3"><p>Был командиром отряда на военных сборах.</p></div>
+                        <div class="dep-3">
+                            <p>Управлял <a href="https://vk.com/thebuilderhd" target="_blank">строительной командой</a> в игре Minecraft:</p>
+                            <div class="flex">
+                                <div class="dep-4"><p>Покупал рекламу</p></div>
+                                <div class="dep-4"><p>Платил «зарплаты»</p></div>
+                                <div class="dep-4"><p>Разрешал конфликты</p></div>
+                                <div class="dep-4"><p>Нанимал строителей (нас было 7 человек)</p></div>
+                                <div class="dep-4"><p>Годовой оборот был примерно $ 30,000</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dep-2">
+                    <p>Не специалист: умею делать разные вещи, а не только что-то одно:</p>
+                    <div class="flex">
+                        <a href="https://vk.com/@533955585-stihi" target="_blank"><div class="dep-3 button"><p>Пишу стихи</p></div></a>
+                        <a href="https://vk.com/vova3141592?w=narrative533955585_91897_456239018" target="_blank"><div class="dep-3 button"><p>Прогнозирую</p></div></a>
+                        <a href="https://vk.com/club209892512?z=album-209892512_301149671" target="_blank"><div class="dep-3 button"><p>Фотографирую</p></div></a>
+                        <a href="https://vk.com/@533955585-rasskazy" target="_blank"><div class="dep-3 button"><p>Пишу рассказы</p></div></a>
+                        <a href="https://vk.com/vova3141592" target="_blank"><div class="dep-3 button"><p>Сочиняю музыку</p></div></a>
+                        <a href="https://www.artstation.com/thebuilderhd" target="_blank"><div class="dep-3 button"><p>Создаю картинки</p></div></a>
+                        <a href="https://klavogonki.ru/u/#/634248/" target="_blank"><div class="dep-3 button"><p>Печатаю на скорость</p></div></a>
+                        <a href="https://vk.com/video/@vova3141592" target="_blank"><div class="dep-3 button"><p>Выступаю с лекциями</p></div></a>
+                        <a href="https://sci.volozhaninov.art/" target="_blank"><div class="dep-3 button"><p>Применяю формальные науки в жизни</p></div></a>
+                    </div>
+                    <div class="dep-3">
+                        <p>Пишу обзорные статьи:</p>
+                        <div class="flex">
+                            <a href="https://quit.volozhaninov.art/" target="_blank"><div class="dep-4 button"><p>«Алгоритм, как бросить курить»</p></div></a>
+                            <a href="https://pa.volozhaninov.art/" target="_blank"><div class="dep-4 button"><p>«Что делать с паническими атаками?</p></div></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <footer></footer>
 </body>
 </html>

@@ -135,6 +135,8 @@ $("tr").hover(function(){
   }
 });
 
+// Кнопка для промотки наверх
+
 $(function(){
 
 	$('.up').click(function(){
