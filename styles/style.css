@@ -67,7 +67,6 @@ body {
     background-color: transparent;
     border: none;
     display: flex;
-    flex-direction: row;
     justify-content: center;
 }
 
@@ -291,6 +290,16 @@ h2 {
     margin: 5px 8px;
 }
 
+p.logos {
+    margin: 20px 22px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+p.logos svg {
+    margin: 0 8px;
+}
+
 /* Картинки */
 
 img {
@@ -303,6 +312,15 @@ img {
 
 img.zoomed {
     cursor: zoom-in;
+}
+
+svg {
+    fill: var(--accent-color);
+    transition: fill var(--transition);
+}
+
+svg:hover {
+    fill: var(--accent-color-hover);
 }
 
 /* Таблицы */
