@@ -8,62 +8,6 @@
     transition: none !important;
 }
 
-/* Основной стиль сайта и переменные */
-
-body {
-    --min-border-radius: 15px;
-    --border: 1px;
-    --margin: 10px;
-    --about-width: 328px;
-    --transition: 200ms;
-
-    margin: 0;
-    font-size: 12pt;
-    font-family: "calibri";
-    background-color: var(--background-color);
-    color: var(--text-color);
-
-    transition: background-color var(--transition), color var(--transition);
-}
-
-.main {
-    margin: 0;
-    background-color: transparent;
-    border: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-* {
-    -webkit-tap-highlight-color: transparent;
-}
-
-/* Кнопки, ссылки, интерактив */
-
-.highlight {
-    background-color: var(--highlight-color);
-}
-
-a {
-    text-decoration: none;
-    color: var(--accent-color);
-    transition: color var(--transition);
-}
-
-.button {
-    display: block;
-    cursor: pointer;
-    color: var(--button-text-color);
-    user-select: none;
-    transition: color var(--transition), background-color var(--transition), border var(--transition), box-shadow var(--transition);
-}
-
-.button:active {
-    background-color: var(--button-click-color);
-    transition: background-color 0ms;
-}
-
 /* Темы */
 
 html[data-theme=light] {
@@ -100,70 +44,35 @@ html[data-theme=dark] {
     --button-click-color: hsla(210, 20%, 60%, 0.5);
 }
 
-p.caption {
-    margin: 8px 32px 29px 32px !important;
-}
-h1.caption {
-    margin: 29px 32px 8px 32px !important;
-}
+/* Основной стиль сайта и переменные */
 
-h1 {
-    font-size: 14pt;
-    font-family: "gilroy";
-}
+body {
+    --min-border-radius: 15px;
+    --border: 1px;
+    --margin: 10px;
+    --about-width: 328px;
+    --transition: 200ms;
 
-h2 {
-    font-size: 12pt;
-    font-family: "gilroy";
-}
-
-.flex {
-    margin: var(--margin);
-    border: none;
-    background: none;
-
-    display: flex;
-    flex-wrap: wrap;
-
-    gap: var(--margin);
-}
-
-/* Меню */
-
-.nav {
-    margin: 0 16px;
-    border: none;
-    background: none;
-
-    display: none;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-
-.flex div:not(.flex){
     margin: 0;
+    font-size: 12pt;
+    font-family: "calibri";
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+    transition: background-color var(--transition), color var(--transition);
 }
 
-.dep-1 p, .dep-1 h1, .dep-1 h2 {
-    margin: 25px 35px;
+.main {
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.dep-2 p, .dep-2 h1, .dep-2 h2 {
-    margin: 20px 30px;
-}
-
-.dep-3 p, .dep-3 h1, .dep-3 h2 {
-    margin: 15px 20px;
-}
-
-.dep-4 p, .dep-4 h1, .dep-4 h2 {
-    margin: 5px 8px;
-}
-
-::selection {
-    background-color: var(--accent-color-hover);
-    color: var(--selection-text-color);
+* {
+    -webkit-tap-highlight-color: transparent;
 }
 
 .about {
@@ -207,125 +116,65 @@ div {
     border-radius: var(--min-border-radius);
 }
 
-img {
-    border: var(--border) solid var(--border-color);
+.flex {
     margin: var(--margin);
+    border: none;
+    background: none;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: var(--margin);
+}
+
+.flex div:not(.flex){
+    margin: 0;
+}
+
+/* Меню */
+
+.nav {
+    margin: 0 16px;
+    border: none;
+    background: none;
+
+    display: none;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* Кнопки, ссылки, интерактив */
+
+.highlight {
+    background-color: var(--highlight-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+    transition: color var(--transition);
+}
+
+.button {
     display: block;
-    width: calc(100% - 2 * var(--margin) - var(--border));
-    transition: box-shadow var(--transition), transform var(--transition), opacity var(--transition);
+    cursor: pointer;
+    color: var(--button-text-color);
+    user-select: none;
+    transition: color var(--transition), background-color var(--transition), border var(--transition), box-shadow var(--transition);
 }
 
-img.zoomed {
-    cursor: zoom-in;
+.button:active {
+    background-color: var(--button-click-color);
+    transition: background-color 0ms;
 }
 
-.table {
-    overflow: hidden;
+::selection {
+    background-color: var(--accent-color-hover);
+    color: var(--selection-text-color);
 }
 
-table {
-    margin: -1px;
-    border-spacing: 0;
-    border-collapse: collapse;
-}
-
-tr {
-    transition: background-color var(--transition);
-}
-
-tr td:last-child,
-tr th:last-child {
-    border-right: none;
-}
-
-th {
-    font-family: "gilroy";
-    vertical-align: bottom;
-    padding: var(--margin);
-    border: var(--border) solid var(--border-color);
-}
-
-td {
-    padding: var(--margin);
-    border: var(--border) solid var(--border-color);
-}
-
-@media (max-width: 810px) {
-    body {
-        --margin: 8px;
-        --min-border-radius: 17px;
-    }
-
-    .main {
-        display: block;
-    }
-
-    .about {
-        position: relative;
-        margin: 59px 0 0 0;
-        width: auto;
-    }
-    
-    .other {
-        width: auto;
-    }
-
-    .table {
-        overflow-x: auto;
-    }
-
-    nav {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background-color: var(--top-color);
-        z-index: 5;
-        border-bottom: var(--border) solid var(--border-color);
-        backdrop-filter: blur(4px);
-        transition: border var(--transition), background-color var(--transition);
-    }
-
-    .theme-switch {
-        top: 11px;
-        left: 6px !important;
-    }
-
-    .moon {
-        right: 25px !important;
-        bottom: -2px !important;
-    }
-
-    .sun {
-        right: 23px !important;
-        bottom: -4px !important;
-    }
-
-    .nav {
-        display: flex;
-    }
-
-}
-
-@media (hover: hover) {
-
-    a:hover {
-        color: var(--accent-color-hover)
-    }
-
-    .button:hover {
-        box-shadow: 0 0 0 calc(var(--border) + 1px) var(--accent-color-hover);
-        color: var(--button-hover-text-color);
-    }
-
-    img.clickable:hover {
-        box-shadow: 0 0 0 calc(var(--border) + 1px) var(--accent-color-hover);
-    }
-
-    .theme-switch:hover {
-        box-shadow: 0 0 0 calc(var(--border) + 1px) var(--accent-color-hover);
-    }
-
-}
+/* Переключатель темы */
 
 .theme-switch {
     position: relative;
@@ -407,9 +256,168 @@ input:checked ~ .moon {
     bottom: -4px;
 }
 
-.footer {
-    text-align: center;
+/* Текст */
+
+p.caption {
+    margin: 8px 32px 29px 32px !important;
 }
+h1.caption {
+    margin: 29px 32px 8px 32px !important;
+}
+
+h1 {
+    font-size: 14pt;
+    font-family: "gilroy";
+}
+
+h2 {
+    font-size: 12pt;
+    font-family: "gilroy";
+}
+
+.dep-1 p, .dep-1 h1, .dep-1 h2 {
+    margin: 25px 35px;
+}
+
+.dep-2 p, .dep-2 h1, .dep-2 h2 {
+    margin: 20px 30px;
+}
+
+.dep-3 p, .dep-3 h1, .dep-3 h2 {
+    margin: 15px 20px;
+}
+
+.dep-4 p, .dep-4 h1, .dep-4 h2 {
+    margin: 5px 8px;
+}
+
+/* Картинки */
+
+img {
+    border: var(--border) solid var(--border-color);
+    margin: var(--margin);
+    display: block;
+    width: calc(100% - 2 * var(--margin) - var(--border));
+    transition: box-shadow var(--transition), transform var(--transition), opacity var(--transition);
+}
+
+img.zoomed {
+    cursor: zoom-in;
+}
+
+/* Таблицы */
+
+.table {
+    overflow: hidden;
+}
+
+table {
+    margin: -1px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+tr {
+    transition: background-color var(--transition);
+}
+
+tr td:last-child,
+tr th:last-child {
+    border-right: none;
+}
+
+th {
+    font-family: "gilroy";
+    vertical-align: bottom;
+    padding: var(--margin);
+    border: var(--border) solid var(--border-color);
+}
+
+td {
+    padding: var(--margin);
+    border: var(--border) solid var(--border-color);
+}
+
+/* Переключение между мобильной и компьютерной версией */
+
+@media (max-width: 810px) {
+    body {
+        --margin: 8px;
+        --min-border-radius: 17px;
+    }
+
+    .main {
+        display: block;
+    }
+
+    .about {
+        position: relative;
+        margin: 59px 0 0 0;
+        width: auto;
+    }
+    
+    .other {
+        width: auto;
+    }
+
+    .table {
+        overflow-x: auto;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: var(--top-color);
+        z-index: 5;
+        border-bottom: var(--border) solid var(--border-color);
+        backdrop-filter: blur(4px);
+        transition: border var(--transition), background-color var(--transition);
+    }
+
+    .theme-switch {
+        top: 11px;
+        left: 6px !important;
+    }
+
+    .moon {
+        right: 25px !important;
+        bottom: -2px !important;
+    }
+
+    .sun {
+        right: 23px !important;
+        bottom: -4px !important;
+    }
+
+    .nav {
+        display: flex;
+    }
+
+}
+
+@media (hover: hover) {
+
+    a:hover {
+        color: var(--accent-color-hover)
+    }
+
+    .button:hover {
+        box-shadow: 0 0 0 calc(var(--border) + 1px) var(--accent-color-hover);
+        color: var(--button-hover-text-color);
+    }
+
+    img.clickable:hover {
+        box-shadow: 0 0 0 calc(var(--border) + 1px) var(--accent-color-hover);
+    }
+
+    .theme-switch:hover {
+        box-shadow: 0 0 0 calc(var(--border) + 1px) var(--accent-color-hover);
+    }
+
+}
+
+/* Шрифты */
 
 @font-face {
     font-family: "gilroy"; 
