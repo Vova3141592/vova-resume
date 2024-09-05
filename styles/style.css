@@ -17,7 +17,6 @@ html[data-theme=light] {
     --accent-color: rgb(0, 150, 100);
     --accent-color-hover: rgb(0, 228, 152);
     --text-color: hsl(0, 0%, 0%);
-    --switch-color: hsl(210, 100%, 100%);
     --highlight-color: rgba(0, 200, 133, 0.07);
     --selection-text-color: white;
 
@@ -25,6 +24,9 @@ html[data-theme=light] {
     --button-text-color: rgb(0, 150, 100);
     --button-hover-text-color: rgb(0, 200, 133);
     --button-click-color: hsla(210, 100%, 100%, 1);
+
+    --slider-color: hsl(210, 100%, 100%);
+    --slider-background-color: hsla(210, 30%, 80%, 0.5);
 }
   
 html[data-theme=dark] {
@@ -34,7 +36,6 @@ html[data-theme=dark] {
     --accent-color: rgb(0, 255, 128);
     --accent-color-hover: rgb(128, 255, 192);
     --text-color: hsl(0, 0%, 100%);
-    --switch-color: black;
     --highlight-color: rgba(128, 255, 192, 0.05);
     --selection-text-color: black;
 
@@ -42,9 +43,12 @@ html[data-theme=dark] {
     --button-text-color: rgb(0, 255, 128);
     --button-hover-text-color: rgb(128, 255, 192);
     --button-click-color: hsla(210, 20%, 60%, 0.5);
+
+    --slider-color: black;
+    --slider-background-color: hsla(210, 20%, 20%, 0.5);
 }
 
-/* Основной стиль сайта и переменные */
+/* Переменные и основной стиль сайта */
 
 body {
     --min-border-radius: 15px;
@@ -173,6 +177,21 @@ a {
     color: var(--selection-text-color);
 }
 
+html {
+    scrollbar-color: var(--border-color) var(--slider-background-color);
+    scrollbar-width: thin;
+}
+
+div p.logos {
+    margin: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+p.logos svg {
+    margin: 0 8px;
+}
+
 /* Переключатель темы */
 
 .theme-switch {
@@ -196,7 +215,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: hsla(210, 30%, 80%, 0.5);
+    background-color: var(--slider-background-color);
     border-radius: 14px;
     border: var(--border) solid var(--border-color);
     transition: background-color var(--transition), border var(--transition);
@@ -209,13 +228,13 @@ a {
     width: 22px;
     left: 2px;
     bottom: 2px;
-    background-color: var(--switch-color);
+    background-color: var(--slider-color);
     transition: background-color var(--transition), transform var(--transition);
     border-radius: 14px;
 }
  
 input:checked + .slider {
-    background-color: var(--top-color);
+    background-color: var(--slider-background-color);
 }
 
 input:checked + .slider:before {
@@ -288,16 +307,6 @@ h2 {
 
 .dep-4 p, .dep-4 h1, .dep-4 h2 {
     margin: 5px 8px;
-}
-
-p.logos {
-    margin: 20px 22px;
-    display: flex;
-    justify-content: flex-start;
-}
-
-p.logos svg {
-    margin: 0 8px;
 }
 
 /* Картинки */
@@ -413,6 +422,8 @@ td {
     }
 
 }
+
+/* Эффекты наведения применяются только на тех устройствах, где можно навестись. Например, на компьютерах. */
 
 @media (hover: hover) {
 
