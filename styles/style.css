@@ -183,13 +183,18 @@ html {
 }
 
 div p.logos {
-    margin: 20px;
+    margin: 16px 0 14px 0;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 p.logos svg {
+    fill: var(--accent-color);
     margin: 0 8px;
+}
+
+p.logos svg:hover {
+    fill: var(--accent-color-hover);
 }
 
 /* Переключатель темы */
@@ -247,14 +252,14 @@ input:checked ~ .sun {
 }
 
 .sun {
+    transition: opacity var(--transition), fill var(--transition), transform var(--transition);
     user-select: none;
-    border: none;
     cursor: pointer;
     position: absolute;
-    height: 19px;
-    width: 19px;
-    right: 21px;
-    bottom: -6px;
+    height: 15px;
+    width: 15px;
+    right: 33px;
+    bottom: 6px;
 }
 
 input:checked ~ .moon {
@@ -263,15 +268,15 @@ input:checked ~ .moon {
 }
 
 .moon {
+    transition: opacity var(--transition), fill var(--transition), transform var(--transition);
     user-select: none;
     opacity: 0;
-    border: none;
     cursor: pointer;
     position: absolute;
     height: 15px;
     width: 15px;
-    right: 23px;
-    bottom: -4px;
+    right: 33px;
+    bottom: 6px;
 }
 
 /* Текст */
@@ -324,12 +329,8 @@ img.zoomed {
 }
 
 svg {
-    fill: var(--accent-color);
+    fill: var(--text-color);
     transition: fill var(--transition);
-}
-
-svg:hover {
-    fill: var(--accent-color-hover);
 }
 
 /* Таблицы */
@@ -405,16 +406,6 @@ td {
     .theme-switch {
         top: 11px;
         left: 6px !important;
-    }
-
-    .moon {
-        right: 25px !important;
-        bottom: -2px !important;
-    }
-
-    .sun {
-        right: 23px !important;
-        bottom: -4px !important;
     }
 
     .nav {
