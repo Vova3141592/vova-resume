@@ -452,6 +452,7 @@ td {
         z-index: 5;
         border-bottom: var(--border) solid var(--border-color);
         backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
         transition: border var(--transition), background-color var(--transition);
     }
 
