@@ -183,7 +183,6 @@ a {
 html {
     scrollbar-color: var(--border-color) var(--slider-background-color);
     scrollbar-width: thin;
-    cursor: none;
 }
 
 div p.logos {
@@ -202,6 +201,10 @@ p.logos svg:hover {
 }
 
 /* Курсор */
+
+html {
+    cursor: none;
+}
 
 div.cursor {
     top: 0;
@@ -238,6 +241,10 @@ div.cursor {
     display: block;
     left: -10px;
     top: -10px;
+}
+
+span.text-node {
+    cursor: text;
 }
 
 /* Переключатель темы */

@@ -176,6 +176,8 @@ clickable.forEach((clickableElement) => {
 
 })
 
+// Курсор при наведении на приближаемые элементы
+
 const zoomed = document.querySelectorAll('.zoomed');
 const cursorSVG = document.querySelector('div.cursor svg.cursor');
 const zoomSVG = document.querySelector('div.cursor svg.zoom');
@@ -190,6 +192,66 @@ zoomed.forEach((zoomedElement) => {
     zoomedElement.addEventListener("mouseleave", () => {
         cursorSVG.style.cssText = 'opacity: 1;'
         zoomSVG.style.cssText = 'opacity: 0;'
+    });
+
+})
+
+// Курсор при наведении на текст
+
+// Функция для оборачивания содержимого в span
+function wrapTextWithSpan() {
+    const tagsToWrap = ['p', 'th', 'td', 'h1', 'h2', 'h3', 'h4'];
+
+    tagsToWrap.forEach(tag => {
+        const elements = document.querySelectorAll(tag);
+
+        elements.forEach(el => {
+            // Начинаем процесс оборачивания, если элемент не является потомком ссылки
+            if (!isInsideLink(el)) {
+                wrapTextNodes(el);
+            }
+        });
+    });
+
+    function wrapTextNodes(node) {
+        node.childNodes.forEach(child => {
+            // Если это текстовый узел и не пустой, оборачиваем его в span с классом "text-node"
+            if (child.nodeType === Node.TEXT_NODE && child.textContent.trim() !== '') {
+                const span = document.createElement('span');
+                span.textContent = child.textContent;
+                span.classList.add('text-node'); // Добавляем класс "text-node"
+                child.replaceWith(span);
+            }
+        });
+    }
+
+    function isInsideLink(node) {
+        // Проверяем, является ли элемент потомком ссылки <a>
+        let parent = node.parentElement;
+        while (parent) {
+            if (parent.tagName.toLowerCase() === 'a') {
+                return true;
+            }
+            parent = parent.parentElement;
+        }
+        return false;
+    }
+}
+
+// Вызываем функцию
+wrapTextWithSpan();
+
+// Скрываем нестандартный курсор при наведении на текст
+const textNode = document.querySelectorAll('span.text-node');
+
+textNode.forEach((textElement) => {
+
+    textElement.addEventListener('mouseover', () => {
+        cursor.style.display = `none`;
+    });
+
+    textElement.addEventListener("mouseleave", () => {
+        cursor.style.display = `block`;
     });
 
 })
