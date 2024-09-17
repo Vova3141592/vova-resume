@@ -241,17 +241,21 @@ function wrapTextWithSpan() {
 // Вызываем функцию
 wrapTextWithSpan();
 
-// Скрываем нестандартный курсор при наведении на текст
+// Скрываем нестандартный курсор при наведении на текст и показываем текстовый курсор
+
 const textNode = document.querySelectorAll('span.text-node');
+const textCursorSVG = document.querySelector('div.cursor svg.text-cursor');
 
 textNode.forEach((textElement) => {
 
     textElement.addEventListener('mouseover', () => {
-        cursor.style.display = `none`;
+        cursorSVG.style.opacity = '0';
+        textCursorSVG.style.opacity = '1';
     });
 
     textElement.addEventListener("mouseleave", () => {
-        cursor.style.display = `block`;
+        cursorSVG.style.opacity = '1';
+        textCursorSVG.style.opacity = '0';
     });
 
 })

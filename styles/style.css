@@ -211,12 +211,12 @@ div.cursor {
     margin: 0;
     border: none;
     background-color: transparent;
-    transition: none;
     padding: 0;
 
     position: fixed;
     pointer-events: none;
     z-index: 6;
+    transition: opacity var(--transition);
 }
 
 .cursor svg {
@@ -231,6 +231,8 @@ div.cursor {
     transition: fill var(--transition), stroke var(--transition);
 }
 
+/* Курсор-лупа */
+
 .cursor svg.zoom g path {
     fill: var(--accent-color-hover);
 }
@@ -243,8 +245,22 @@ div.cursor {
     top: -10px;
 }
 
-span.text-node {
-    cursor: text;
+/* Текстовый курсор */
+
+.text-cursor {
+    opacity: 0;
+    position: absolute;
+    display: block;
+    left: -7px;
+    top: -10px;
+}
+
+.cursor svg.text-cursor g path {
+    fill: var(--cursor-fill-color);
+    stroke: var(--cursor-fill-color);
+    fill-opacity: 1;
+    stroke-linecap: round;
+    stroke-opacity: 1
 }
 
 /* Переключатель темы */
@@ -507,28 +523,43 @@ td {
 
 @media (min-resolution: 1x) {
     .cursor svg g path {
-        stroke-width:0.2647155;
+        stroke-width: 0.2647155;
     }
+
     .cursor svg.zoom g path {
-        stroke-width:25.6;
+        stroke-width: 25.6;
+    }
+
+    .cursor svg.text-cursor g path {
+        stroke-width: 0.513214;
     }
 }
 
 @media (min-resolution: 1.25x) {
     .cursor svg g path {
-        stroke-width:0.22059625;
+        stroke-width: 0.22059625;
     }
+
     .cursor svg.zoom g path {
-        stroke-width:20.48;
+        stroke-width: 20.48;
+    }
+
+    .cursor svg.text-cursor g path {
+        stroke-width: 0.410;
     }
 }
 
 @media (min-resolution: 1.5x) {
     .cursor svg g path {
-        stroke-width:0.176477;
+        stroke-width: 0.176477;
     }
+
     .cursor svg.zoom g path {
-        stroke-width:17;
+        stroke-width: 17;
+    }
+
+    .cursor svg.text-cursor g path {
+        stroke-width: 0.3421;
     }
 }
 
