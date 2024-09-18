@@ -216,7 +216,7 @@ div.cursor {
     position: fixed;
     pointer-events: none;
     z-index: 6;
-    transition: opacity var(--transition);
+    display: none;
 }
 
 .cursor svg {
@@ -251,11 +251,11 @@ div.cursor {
     opacity: 0;
     position: absolute;
     display: block;
-    left: -7px;
-    top: -10px;
+    left: -6px;
+    top: -9px;
 }
 
-.cursor svg.text-cursor g path {
+svg.text-cursor g path {
     fill: var(--cursor-fill-color);
     stroke: var(--cursor-fill-color);
     fill-opacity: 1;
@@ -526,12 +526,12 @@ td {
         stroke-width: 0.2647155;
     }
 
-    .cursor svg.zoom g path {
+    svg.zoom g path {
         stroke-width: 25.6;
     }
 
-    .cursor svg.text-cursor g path {
-        stroke-width: 0.513214;
+    svg.text-cursor g path {
+        stroke-width: 0.529167;
     }
 }
 
@@ -540,12 +540,12 @@ td {
         stroke-width: 0.22059625;
     }
 
-    .cursor svg.zoom g path {
+    svg.zoom g path {
         stroke-width: 20.48;
     }
 
-    .cursor svg.text-cursor g path {
-        stroke-width: 0.410;
+    svg.text-cursor g path {
+        stroke-width: 0.4233336;
     }
 }
 
@@ -554,12 +554,12 @@ td {
         stroke-width: 0.176477;
     }
 
-    .cursor svg.zoom g path {
+    svg.zoom g path {
         stroke-width: 17;
     }
 
-    .cursor svg.text-cursor g path {
-        stroke-width: 0.3421;
+    svg.text-cursor g path {
+        stroke-width: 0.352778;
     }
 }
 

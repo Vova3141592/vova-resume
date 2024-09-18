@@ -159,6 +159,26 @@ const updateCursorPosition = (event) => {
 
 window.addEventListener('mousemove', updateCursorPosition);
 
+// Скрываем курсор, если мышь находится за пределами окна сайта
+
+const body = document.querySelector('body')
+
+const showCursor = () => {
+    cursor.style.display = 'block';
+}
+
+// Скрываем курсор, когда мышь уходит за пределы body, но игнорируем верхние 2px
+const hideCursor = (event) => {
+    // Если курсор находится в пределах от 1 до 2 пикселей сверху, не скрываем его
+    if (event.clientY > 0 && event.clientY <= 5) {
+        return; // Не скрываем курсор, если он в пределах верхних 2px
+    }
+    cursor.style.display = 'none'; // Скрываем, если координата y равна 0 или мышь ушла вниз
+}
+
+body.addEventListener('mouseenter', showCursor);
+body.addEventListener('mouseleave', hideCursor);
+
 // Курсор при наведении на кликабельные элементы
 
 const clickable = document.querySelectorAll('.button, img.clickable, a svg, .link, .slider, .sun, .moon');
