@@ -58,6 +58,7 @@ body {
     --border: 1px;
     --margin: 10px;
     --about-width: 292px;
+    --other-width: 700px;
     --transition: 200ms;
 
     margin: 0;
@@ -94,7 +95,7 @@ body {
 
 .other {
     margin: 0;
-    width: 700px;
+    width: var(--other-width);
     border: none;
     background: none;
 }
@@ -216,7 +217,7 @@ div.cursor {
     position: fixed;
     pointer-events: none;
     z-index: 6;
-    display: none;
+    display: none; /* Из-за этого CSS-правила у меня один раз курсор пропал и не появлялся, пока я не увёл мышку за пределы сайта и не вернул её обратно. Возможно, лучше убрать это правило, чтобы такого больше не повторялось, но без него выглядит уродско. Так что пока оставлю, но если такой баг будет часто случаться, придётся или починить его, или это правило убрать. */
 }
 
 .cursor svg {
