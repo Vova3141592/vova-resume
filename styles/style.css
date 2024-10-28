@@ -138,17 +138,10 @@ div {
     margin: 0;
 }
 
-/* Меню */
+/* Меню (остальные CSS-правила в разделе с медиа-запросами, ведь меню исключительно мобильное) */
 
-.nav {
-    margin: 0 16px;
-    border: none;
-    background: none;
-
+nav {
     display: none;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
 }
 
 /* Кнопки, ссылки, интерактив */
@@ -470,6 +463,7 @@ td {
     }
 
     nav {
+        display: flex;
         position: fixed;
         top: 0;
         width: 100%;
@@ -484,10 +478,6 @@ td {
     .theme-switch {
         top: 11px;
         left: 6px !important;
-    }
-
-    .nav {
-        display: flex;
     }
 
 }

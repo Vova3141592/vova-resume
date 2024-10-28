@@ -4,7 +4,7 @@ $('*').addClass("preload")
 // Функция для перемещения переключателя темы
 function moveThemeSwitch() {
     const themeSwitch = $('.theme-switch');
-    const nav = $('.nav');
+    const nav = $('nav');
     const about = $('.about');
 
     if (window.matchMedia('(max-width: 810px)').matches) {
